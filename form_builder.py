@@ -237,10 +237,10 @@ function onTimeTrigger() {{
 
       if (meetLink && notesUrl) {{
         url += "&text=bookmeet"
-              + "&htype=document"
-              + "&fname=" + encodeURIComponent("notes.pdf")
-              + "&url=" + encodeURIComponent(notesUrl)
-              + "&Params=" + encodeURIComponent(meetLink);
+          + "&htype=document"
+          + "&fname=" + encodeURIComponent("notes.pdf")
+          + "&url=" + encodeURIComponent(notesUrl)
+          + "&Params=" + encodeURIComponent(meetLink);
       }} else if (meetLink && !notesUrl) {{
         url += "&text=" + encodeURIComponent("meet " + meetLink);
       }} else {{
@@ -269,8 +269,8 @@ function refreshSlots() {{
   for (var i = 1; i < data.length; i++) {{
     var row = data[i];
     var slotRaw = row[slotCol];
-    var phone = row[phoneCol];
-    var email = row[emailCol];
+    var phone = row[phoneCol] ? row[phoneCol].toString().trim() : "";
+    var email = row[emailCol] ? row[emailCol].toString().trim() : "";
     var status = statusCol !== -1 ? row[statusCol] : "";
     if (!slotRaw || status === "Cancelled" || status === "Duplicate") continue;
 
@@ -281,6 +281,8 @@ function refreshSlots() {{
     uniqueSet[key] = true;
     counts[slot] = (counts[slot] || 0) + 1;
   }}
+
+  Logger.log("Slot counts: " + JSON.stringify(counts));
 
   var limits = {slot_limits_js};
 
@@ -315,6 +317,7 @@ function refreshSlots() {{
   form.setAcceptingResponses(choices.length > 0);
 }}
 """
+
 
     # Manifest
     manifest = '{ "timeZone": "Asia/Kolkata", "exceptionLogging": "STACKDRIVER" }'
