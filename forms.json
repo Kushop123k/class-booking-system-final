@@ -1,0 +1,105 @@
+[
+  {
+    "class_name": "mago",
+    "form_id": "1rcsBB9vfgP-ALbg2ZhFUiIF8K0ZR3whKbI1QpRYnAn0",
+    "form_url": "https://docs.google.com/forms/d/1rcsBB9vfgP-ALbg2ZhFUiIF8K0ZR3whKbI1QpRYnAn0/viewform",
+    "form_edit_url": "https://docs.google.com/forms/d/1rcsBB9vfgP-ALbg2ZhFUiIF8K0ZR3whKbI1QpRYnAn0/edit",
+    "slots": [
+      {
+        "name": "slot1",
+        "limit": 2,
+        "date": "2025-07-29"
+      },
+      {
+        "name": "slot2",
+        "limit": 2,
+        "date": "2925-09-20"
+      },
+      {
+        "name": "slot3",
+        "limit": 2,
+        "date": "2025-07-29"
+      }
+    ],
+    "limit": 10,
+    "meet_link": "",
+    "notes": "",
+    "sheet_url": "https://docs.google.com/spreadsheets/d/1gnwTsmd5Or1vAHhd3r6PGmiAUSw8An6vJK1pKMTN4vc/edit",
+    "script_id": "1OmR4AoUN28jsl7xJxqzkCKda0P7ydY0JHcJH42fPudvcR8Lb6gap3uoZ"
+  },
+  {
+    "class_name": " jc c",
+    "form_id": "1i5SqtjLA4yuzNdbcEOBJkFntCnqYi86ylTJoGd4zL-Y",
+    "form_url": "https://docs.google.com/forms/d/1i5SqtjLA4yuzNdbcEOBJkFntCnqYi86ylTJoGd4zL-Y/viewform",
+    "form_edit_url": "https://docs.google.com/forms/d/1i5SqtjLA4yuzNdbcEOBJkFntCnqYi86ylTJoGd4zL-Y/edit",
+    "slots": [
+      {
+        "name": "slot1",
+        "limit": 2,
+        "date": "2026-02-20"
+      }
+    ],
+    "limit": 111,
+    "meet_link": "http://meet.ex.com/",
+    "notes": "https://drive.google.com/uc?id=1asBy5EgHoqAGNcCHBXXMXAMX7Uffo1CL&export=download",
+    "sheet_url": "https://docs.google.com/spreadsheets/d/11MJl7mJm6s1-9rvXU3jitic6ypfUI_a_AGUnZOGn7g0/edit",
+    "script_id": "1CIHnicEAK2BJdbCmPKCb-yLPJqsgD6SLJYGnAf20IGOiClfYkkczvlfI"
+  },
+  {
+    "class_name": "mago121",
+    "form_id": "1YFIwtoazM5vfG40NLKDkmk3fmxidt268g3mdulVIrKM",
+    "form_url": "https://docs.google.com/forms/d/1YFIwtoazM5vfG40NLKDkmk3fmxidt268g3mdulVIrKM/viewform",
+    "form_edit_url": "https://docs.google.com/forms/d/1YFIwtoazM5vfG40NLKDkmk3fmxidt268g3mdulVIrKM/edit",
+    "slots": [
+      {
+        "name": "slot1`",
+        "limit": 5,
+        "date": "2026-06-27"
+      }
+    ],
+    "limit": 11,
+    "meet_link": "http://meet.ex.com/",
+    "notes": "https://drive.google.com/uc?id=1ozG-Ex8l5wh3KnJGgdwjgJd9kcjRMuyo&export=download",
+    "sheet_url": "https://docs.google.com/spreadsheets/d/1okzu09X1mDA2GxN1F2V07Qgi5XRF__oao2GMo6YCTlI/edit",
+    "script_id": "1IKhtqQDwrhP3pitakp6TSHt41eR7_mEcOOICVfxqH59arcKItxtND2RN"
+  },
+  {
+    "class_name": "kushal",
+    "form_id": "1PfuD0r7M3Kbmrw2oHfEtebcl5EBlVK8UeAcY6wMH9-0",
+    "form_url": "https://docs.google.com/forms/d/1PfuD0r7M3Kbmrw2oHfEtebcl5EBlVK8UeAcY6wMH9-0/viewform",
+    "form_edit_url": "https://docs.google.com/forms/d/1PfuD0r7M3Kbmrw2oHfEtebcl5EBlVK8UeAcY6wMH9-0/edit",
+    "slots": [
+      {
+        "name": "SLOT1",
+        "limit": 3,
+        "date": "2025-07-04T19:05"
+      },
+      {
+        "name": "SLOT2",
+        "limit": 3,
+        "date": "2025-07-04T19:10"
+      }
+    ],
+    "meet_link": "http://meet.ex.com/",
+    "notes": "",
+    "sheet_url": "https://docs.google.com/spreadsheets/d/1Iiqf1shXXmyfy-8tCsua-b66lsgkoBK_YXRuSXSSB_g/edit",
+    "script_id": "11b9U-fzVUt6MKMdHYelC_CDXi_Z_2IquMNtO34d7it7XuKnwkr9YjJ84"
+  },
+  {
+    "class_name": "class12",
+    "form_id": "1d8NDY-0d9cTkC7ARKpqMS21lMbLzqYcIBLcDvQJInDc",
+    "form_url": "https://docs.google.com/forms/d/1d8NDY-0d9cTkC7ARKpqMS21lMbLzqYcIBLcDvQJInDc/viewform",
+    "form_edit_url": "https://docs.google.com/forms/d/1d8NDY-0d9cTkC7ARKpqMS21lMbLzqYcIBLcDvQJInDc/edit",
+    "slots": [
+      {
+        "name": "ss",
+        "limit": 2,
+        "date": "2025-08-01T01:33"
+      }
+    ],
+    "meet_link": "http://meet.ex.com/",
+    "notes": "",
+    "sheet_url": "",
+    "script_id": "1LcUVJH515B7WEy0tOnwlMF4VgSnEdORM8ifF6wt0z5ISPKtTAEmGO45C"
+  }
+]

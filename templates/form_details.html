@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Submissions for {{ form.class_name }}</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #333;
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      font-size: 14px;
+    }
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+    tr:nth-child(even){
+      background-color: #f9f9f9;
+    }
+    tr:hover {
+      background-color: #eaeaea;
+    }
+    .top-links {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .top-links a {
+      text-decoration: none;
+      margin: 0 10px;
+      color: #007bff;
+    }
+  </style>
+</head>
+<body>
+  <h1>Submissions: {{ form.class_name }}</h1>
+  <div class="top-links">
+    <a href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+    {% if form.sheet_url %}
+      | <a href="{{ form.sheet_url }}" target="_blank">Open Sheet</a>
+    {% endif %}
+  </div>
+  {% if values %}
+    <table>
+      <tr>
+        {% for header in values[0] %}
+          <th>{{ header }}</th>
+        {% endfor %}
+      </tr>
+      {% for row in values[1:] %}
+        <tr>
+          {% for cell in row %}
+            <td>{{ cell }}</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p>No submissions found.</p>
+  {% endif %}
+</body>
+</html>

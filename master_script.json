@@ -1,0 +1,13 @@
+{
+    "files": [{
+            "name": "Code",
+            "type": "SERVER_JS",
+            "source": "// ✅ Trigger function to handle form submission\nfunction onFormSubmit(e) {\n  const sheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(\"Responses\");\n  const slotSheet = SpreadsheetApp.getActiveSpreadsheet().getSheetByName(\"SlotLimits\");\n  const lastRow = sheet.getLastRow();\n  const responses = sheet.getRange(lastRow, 1, 1, sheet.getLastColumn()).getValues()[0];\n\n  const timestamp = responses[0];\n  const name = responses[1];\n  const mobile = responses[2];\n  const slot = responses[3];\n\n  if (!mobile || mobile.length < 10) return;\n\n  // ✅ SMS content\n  const message = `Dear ${name}, your slot '${slot}' has been booked. Thank you!`;\n\n  // ✅ BhashSMS API WhatsApp\n  const url = `http://bhashsms.com/api/sendmsg.php?user=BhashWapAi&pass=bwa@123&sender=BUZWAP&phone=${mobile}&text=${encodeURIComponent(message)}&priority=wa&stype=normal`;\n  UrlFetchApp.fetch(url);\n\n  // ✅ Check if slot is full now\n  const limits = slotSheet.getRange(\"A2:B\" + slotSheet.getLastRow()).getValues();\n  let slotMap = {};\n  limits.forEach(row => {\n    if (row[0]) slotMap[row[0]] = row[1];\n  });\n\n  const slotCounts = {};\n  const slotData = sheet.getRange(\"D2:D\" + lastRow).getValues().flat();\n  slotData.forEach(s => {\n    if (s) slotCounts[s] = (slotCounts[s] || 0) + 1;\n  });\n\n  if (slotCounts[slot] >= slotMap[slot]) {\n    disableSlot(slot);\n  }\n}\n\n// ✅ Disable slot if full\nfunction disableSlot(slotName) {\n  const form = FormApp.openByUrl(SpreadsheetApp.getActiveSpreadsheet().getFormUrl());\n  const items = form.getItems(FormApp.ItemType.MULTIPLE_CHOICE);\n  for (const item of items) {\n    const title = item.getTitle();\n    if (title === \"Choose a slot\") {\n      const mcItem = item.asMultipleChoiceItem();\n      const options = mcItem.getChoices();\n      const newOptions = options.map(opt => {\n        if (opt.getValue() === slotName) {\n          return mcItem.createChoice(opt.getValue(), false);\n        } else {\n          return opt;\n        }\n      });\n      mcItem.setChoices(newOptions);\n    }\n  }\n}\n\n// ✅ Setup trigger manually once\nfunction setupTrigger() {\n  ScriptApp.newTrigger(\"onFormSubmit\")\n    .forSpreadsheet(SpreadsheetApp.getActiveSpreadsheet())\n    .onFormSubmit()\n    .create();\n}\n"
+        },
+        {
+            "name": "appsscript",
+            "type": "JSON",
+            "source": "{\n  \"timeZone\": \"Asia/Kolkata\",\n  \"exceptionLogging\": \"STACKDRIVER\",\n  \"runtimeVersion\": \"V8\"\n}"
+        }
+    ]
+}
